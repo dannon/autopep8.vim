@@ -24,7 +24,7 @@ def ap8(r):
     """returns fixed lines"""
     r_0, r_1 = vim.current.range.start, vim.current.range.end
     lines = '\n'.join(r)
-    fixedlines = autopep8.fix_string(lines)
+    fixedlines = autopep8.fix_code(lines)
     fl = fixedlines.split('\n')
     fl = [x.encode('utf-8') for x in fl] # Force to utf-8
     return fl
